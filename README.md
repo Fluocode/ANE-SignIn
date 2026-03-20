@@ -57,3 +57,8 @@ You can reference **multiple** `<extensionID>` entries in the same AIR applicati
 | **Min. OS** | iOS 13+ | Per Google / device (see folder README) |
 
 For step-by-step setup, keys, and XML snippets, use the README inside each project folder.
+
+***
+If You like what I make please donate:
+[![Foo](https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4QBWVDKEVRL46)
+*** 	
