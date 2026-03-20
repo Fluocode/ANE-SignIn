@@ -1,0 +1,27 @@
+<platform xmlns="http://ns.adobe.com/air/extension/22.0">
+    <sdkVersion>13.0</sdkVersion>
+    <linkerOptions>
+        <option>-framework AppAuth</option>
+        <option>-framework AppCheckCore</option>
+        <option>-framework GTMAppAuth</option>
+        <option>-framework GTMSessionFetcher</option>
+        <option>-framework GoogleSignIn</option>
+        <option>-framework GoogleUtilities</option>
+        <option>-framework FBLPromises</option>
+        <option>-L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos</option>
+        <option>-lswiftCompatibility51</option>
+        <option>-lswiftCompatibility56</option>
+        <option>-lswiftCompatibilityConcurrency</option>
+        <option>-lswiftCompatibilityPacks</option>
+    </linkerOptions>
+    <packagedDependencies>
+        <packagedDependency>AppAuth.framework</packagedDependency>
+        <packagedDependency>AppCheckCore.framework</packagedDependency>
+        <packagedDependency>GTMAppAuth.framework</packagedDependency>
+        <packagedDependency>GTMSessionFetcher.framework</packagedDependency>
+        <packagedDependency>GoogleSignIn.framework</packagedDependency>
+        <packagedDependency>GoogleUtilities.framework</packagedDependency>
+        <packagedDependency>FBLPromises.framework</packagedDependency>
+    </packagedDependencies>
+</platform>
+

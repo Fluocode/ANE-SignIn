@@ -1,0 +1,12 @@
+<platform xmlns="http://ns.adobe.com/air/extension/22.0">
+    <packagedDependencies>
+        <!-- Google Play Services Auth should be provided by other ANEs or the main app -->
+        <!-- If needed, uncomment and add the JAR here: 
+        <packagedDependency>play-services-auth-20.7.0.jar</packagedDependency>
+        -->
+    </packagedDependencies> 
+    <packagedResources>
+
+    </packagedResources>
+</platform>
+

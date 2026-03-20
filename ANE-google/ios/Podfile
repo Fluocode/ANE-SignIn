@@ -1,0 +1,27 @@
+# Google Sign-In ANE - iOS static library
+# Run: pod install
+# Then open GoogleSignInExtension.xcworkspace and build (or use xcodebuild -workspace ...)
+
+platform :ios, '13.0'
+use_frameworks! :linkage => :static
+
+target 'GoogleSignInExtension' do
+  project 'GoogleSignInExtension.xcodeproj'
+  pod 'GoogleSignIn', '~> 8.0'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      # Remove deprecated armv7; build only for arm64
+      config.build_settings['ARCHS'] = 'arm64'
+      # Silence deprecation warnings in third-party pods (AppAuth, GoogleSignIn, etc.)
+      config.build_settings['GCC_WARN_DEPRECATED_FUNCTIONS'] = 'NO'
+      config.build_settings['CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS'] = 'NO'
+      flags = config.build_settings['OTHER_CFLAGS'] || '$(inherited)'
+      flags = flags.is_a?(Array) ? flags.join(' ') : flags
+      config.build_settings['OTHER_CFLAGS'] = "#{flags} -Wno-deprecated-declarations"
+    end
+  end
+end

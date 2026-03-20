@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2C30001 /* AppleSignInExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C30002 /* AppleSignInExtension.m */; };
+		B2C30007 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C3000B /* AuthenticationServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B2C30002 /* AppleSignInExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppleSignInExtension.m; sourceTree = "<group>"; };
+		B2C30003 /* AppleSignInExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleSignInExtension.h; sourceTree = "<group>"; };
+		B2C30004 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+		B2C30005 /* AppleSignInExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = AppleSignInExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2C3000B /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = AuthenticationServices.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2C30006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2C30007 /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2C30008 /* AppleSignInExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B2C30002 /* AppleSignInExtension.m */,
+				B2C30003 /* AppleSignInExtension.h */,
+				B2C30004 /* FlashRuntimeExtensions.h */,
+			);
+			path = .;
+			sourceTree = "<group>";
+		};
+		B2C30009 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2C30005 /* AppleSignInExtension.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2C3000A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2C3000B /* AuthenticationServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2C30011 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				B2C30008 /* AppleSignInExtension */,
+				B2C3000A /* Frameworks */,
+				B2C30009 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2C3000C /* AppleSignInExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2C3000D /* Build configuration list for PBXNativeTarget "AppleSignInExtension" */;
+			buildPhases = (
+				B2C3000E /* Sources */,
+				B2C30006 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppleSignInExtension;
+			productName = AppleSignInExtension;
+			productReference = B2C30005 /* AppleSignInExtension.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2C3000F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					B2C3000C = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = B2C30010 /* Build configuration list for PBXProject "AppleSignInExtension" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2C30011 /* Root */;
+			productRefGroup = B2C30009 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2C3000C /* AppleSignInExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2C3000E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2C30001 /* AppleSignInExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B2C30012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B2C30013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2C30014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = NO;
+				EXECUTABLE_PREFIX = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					AuthenticationServices,
+				);
+				PRODUCT_NAME = AppleSignInExtension;
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B2C30015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = NO;
+				EXECUTABLE_PREFIX = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					AuthenticationServices,
+				);
+				PRODUCT_NAME = AppleSignInExtension;
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2C3000D /* Build configuration list for PBXNativeTarget "AppleSignInExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2C30014 /* Debug */,
+				B2C30015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2C30010 /* Build configuration list for PBXProject "AppleSignInExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2C30012 /* Debug */,
+				B2C30013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2C3000F /* Project object */;
+}

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!-- 
+	Usage:
+
+	To localize the description, use the following format for the description element.
+	<description>
+	<text xml:lang="en">English App description goes here</text>
+	<text xml:lang="fr">French App description goes here</text>
+	<text xml:lang="ja">Japanese App description goes here</text>
+	</description>
+
+	To localize the name, use the following format for the name element.
+	<name>
+	<text xml:lang="en">English App name goes here</text>
+	<text xml:lang="fr">French App name goes here</text>
+	<text xml:lang="ja">Japanese App name goes here</text>
+	</name>
+-->
+<application xmlns="http://ns.adobe.com/air/application/51.2">
+  <id>com.fluocode.findcard</id>
+  <versionNumber>0.054</versionNumber>
+  <filename>TestSignIn</filename>
+  <description/>
+  <name>Test SignIn</name>
+  <copyright/>
+  <initialWindow>
+    <depthAndStencil>true</depthAndStencil>
+    <content>Main.swf</content>
+    <systemChrome>standard</systemChrome>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <fullScreen>false</fullScreen>
+    
+    <renderMode>direct</renderMode>
+    <autoOrients>true</autoOrients>
+    
+    <aspectRatio>portrait</aspectRatio></initialWindow>
+	  
+  <icon>
+        
+	  </icon>
+	
+	  <android>
+        <manifestAdditions><![CDATA[
+     
+			<manifest android:installLocation="auto">
+				<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="35" />
+			    <uses-permission android:name="android.permission.INTERNET"/>
+			    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+			    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+			    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+				<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+				<uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+				
+				
+				<!-- uses-permission android:name="android.permission.READ_MEDIA_IMAGES" android:minSdkVersion="33"/ 
+				
+				<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+				<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+				
+				-->
+				
+			    <uses-permission android:name="android.permission.CAMERA"/>
+			    <uses-feature android:name="android.hardware.camera" android:required="true" />
+                <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+				<uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+				<uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+
+				<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+			    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+				
+				
+				<uses-permission android:name="com.android.vending.BILLING"/>
+				<uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
+        		
+				<!-- This is required - - >
+			    <uses-feature
+					android:glEsVersion="0x00020000"
+					android:required="true"/ -->
+					
+			
+
+					<application android:enabled="true" android:largeHeap="true"  android:hardwareAccelerated="true" android:allowBackup="true" android:requestLegacyExternalStorage="true">
+					
+
+					<!-- this lets you support devices larger than 16:9 ratio -->
+					<meta-data android:name="android.max_aspect" android:value="ratio_float" />
+					<meta-data android:name="android.notch_support" android:value="true"/>
+					
+					<!-- Required by googlePlayServices_basement.ane -->
+					<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+					
+			
+					<activity android:hardwareAccelerated="true"  android:launchMode="singleTop" android:largeHeap="true">
+						<intent-filter>
+							<action android:name="android.intent.action.MAIN" />
+							<category android:name="android.intent.category.LAUNCHER" />
+						</intent-filter>
+						<intent-filter>
+							<action android:name="android.intent.action.VIEW" />
+							<category android:name="android.intent.category.BROWSABLE" />
+							<category android:name="android.intent.category.DEFAULT" />
+						</intent-filter>
+					</activity>
+			
+					<provider
+                        android:name="android.support.v4.content.FileProvider"
+                        android:authorities="com.fluocode.pixelshape.provider"
+                        android:exported="false"
+                        android:grantUriPermissions="true">
+                        <meta-data
+                            android:name="android.support.FILE_PROVIDER_PATHS"
+                            android:resource="@xml/provider_paths"/>
+                    </provider>
+                    
+					
+					<!-- required for camera dialog -->
+					<!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" -->
+					 <activity android:name="com.freshplanet.ane.AirImagePicker.activities.GalleryActivity" />
+                     <activity android:name="com.freshplanet.ane.AirImagePicker.activities.CropActivity" />
+                     <activity android:name="com.freshplanet.ane.AirImagePicker.activities.CameraActivity" />
+                     <activity android:name="com.freshplanet.ane.AirImagePicker.activities.RecentPhotosActivity" />
+					
+					
+					<!-- required for billing dialog -->
+					<meta-data android:name="com.google.android.play.billingclient.version"
+						android:value="8.0.0" />	
+
+					 <!-- required for billing dialog -->
+					<activity
+						android:name="com.android.billingclient.api.ProxyBillingActivity"
+						android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+						android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+					 
+					<!-- Using Admob  -->
+					<!-- Include the AdActivity configChanges and themes. -->
+					<activity
+						android:name="com.google.android.gms.ads.AdActivity"
+						android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+						android:theme="@android:style/Theme.Translucent" />
+
+					<meta-data
+						android:name="com.google.android.gms.ads.APPLICATION_ID"
+						android:value="ca-app-pub-2166575203239697~9464207738"/> <!-- Replace with your own APPLICATION_ID  ca-app-pub-0000000000000000~1111111111 -->
+					<!-- Using Admob  -->		
+					
+					
+					<!-- AdColony start - - > <activity android:name="com.adcolony.sdk.AdColonyInterstitialActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" /> <activity android:name="com.adcolony.sdk.AdColonyAdViewActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" /> < !- - AdColony end -->
+					
+        		</application>
+			</manifest>
+			
+		]]></manifestAdditions>
+    </android>
+    <iPhone>
+  
+  
+  
+  
+  <!-- Entitlements><![CDATA[<key>get-task-allow</key><false/><key>beta-reports-active</key><true/>]]></Entitlements 
+      <Entitlements><![CDATA[<key>get-task-allow</key><false/><key>beta-reports-active</key><true/>]]></Entitlements>  
+  
+  -->
+	  <Entitlements><![CDATA[
+  <key>com.apple.developer.applesignin</key>
+  <array>
+    <string>Default</string>
+  </array>
+]]></Entitlements>
+
+	  <assetsCar>Assets.car</assetsCar>
+
+
+	  <InfoAdditions><![CDATA[
+  <key>UIDeviceFamily</key>
+  <array>
+    <string>1</string>
+    <string>2</string>
+  </array>
+  <key>MinimumOSVersion</key>
+  <string>13.0</string>
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>com.googleusercontent.apps.1047023546747-pcubsnbc83pueirek46p4r5pe9jqvae7</string>
+      </array>
+    </dict>
+  </array>
+  <key>GADApplicationIdentifier</key>
+  <string>ca-app-pub-2166575203239697~4092452787</string>
+  <key>CFBundleIconName</key>
+  <string>AppIcon</string>
+  <key>ITSAppUsesNonExemptEncryption</key>
+  <false/>
+  <key>UIPrerenderedIcon</key>
+  <true/>
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+    <key>NSExceptionDomains</key>
+    <dict>
+      <key>fluocode.com</key>
+      <dict>
+        <key>NSExceptionAllowsInsecureHTTPLoads</key>
+        <true/>
+        <key>NSIncludesSubdomains</key>
+        <true/>
+        <key>NSExceptionRequiresForwardSecrecy</key>
+        <true/>
+      </dict>
+    </dict>
+  </dict>
+
+  <key>NSCameraUsageDescription</key>
+  <string>Need access to the camera to take pictures and rebuilt them with shapes</string>
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>Need access to your photo library to save images</string>
+  <key>NSPhotoLibraryAddUsageDescription</key>
+  <string>Need access to your photo library to import images and then process it</string>
+  <key>NSLocationAlwaysUsageDescription</key>
+  <string>Use location always</string>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>WhenInUse Location</string>
+  <key>NSContactsUsageDescription</key>
+  <string>The access to contacts is not requiered</string>
+  <key>NSCalendarsUsageDescription</key>
+  <string>The access to calendar is not requiered</string>
+]]></InfoAdditions>
+        <requestedDisplayResolution>high</requestedDisplayResolution>
+    </iPhone>
+    
+
+  <versionLabel/>
+  
+  <supportedLanguages>en es</supportedLanguages>
+
+    
+  <extensions>
+    <extensionID>com.fluocode.ane.signin.google</extensionID>
+    <extensionID>com.fluocode.ane.signin.apple</extensionID>
+  </extensions>
+</application>

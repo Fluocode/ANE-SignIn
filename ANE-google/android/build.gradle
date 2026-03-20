@@ -1,0 +1,64 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.2'
+    }
+}
+
+apply plugin: 'com.android.library'
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+android {
+    namespace 'com.fluocode.ane.signin.google'
+    compileSdkVersion 33
+    buildToolsVersion "33.0.0"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+        }
+    }
+}
+
+dependencies {
+    // Adobe AIR SDK
+    implementation files('libs/FlashRuntimeExtensions.jar')
+    implementation files('libs/runtimeClasses.jar')
+    
+    // Google Sign-In SDK nativo (sin Firebase)
+    // CRITICAL: Using 'compileOnly' - this is a compile-time dependency ONLY.
+    // The actual JAR must be provided by other ANEs or included in the main app
+    compileOnly 'com.google.android.gms:play-services-auth:20.7.0'
+}
+
+// Tarea para copiar automáticamente el JAR compilado
+task copyJar(type: Copy) {
+    from 'build/intermediates/aar_main_jar/release/classes.jar'
+    into '.'
+    rename 'classes.jar', 'GoogleSignInExtension.jar'
+    doLast {
+        println "✅ JAR copiado: GoogleSignInExtension.jar"
+    }
+}
+
+// Hacer que copyJar se ejecute después de build
+build.finalizedBy(copyJar)
+

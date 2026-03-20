@@ -1,0 +1,8 @@
+com.fluocode.ane.signin.google-pngs-0 C:\Users\esdeb\Documentos\_PROJECTS\ANE-SignIn\ANE-google\android\build\generated\res\pngs\release
+com.fluocode.ane.signin.google-resValues-1 C:\Users\esdeb\Documentos\_PROJECTS\ANE-SignIn\ANE-google\android\build\generated\res\resValues\release
+com.fluocode.ane.signin.google-rs-2 C:\Users\esdeb\Documentos\_PROJECTS\ANE-SignIn\ANE-google\android\build\generated\res\rs\release
+com.fluocode.ane.signin.google-mergeReleaseResources-3 C:\Users\esdeb\Documentos\_PROJECTS\ANE-SignIn\ANE-google\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.fluocode.ane.signin.google-mergeReleaseResources-4 C:\Users\esdeb\Documentos\_PROJECTS\ANE-SignIn\ANE-google\android\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.fluocode.ane.signin.google-merged_res-5 C:\Users\esdeb\Documentos\_PROJECTS\ANE-SignIn\ANE-google\android\build\intermediates\merged_res\release
+com.fluocode.ane.signin.google-main-6 C:\Users\esdeb\Documentos\_PROJECTS\ANE-SignIn\ANE-google\android\src\main\res
+com.fluocode.ane.signin.google-release-7 C:\Users\esdeb\Documentos\_PROJECTS\ANE-SignIn\ANE-google\android\src\release\res
